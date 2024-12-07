@@ -1,0 +1,35 @@
+voting application
+what? :- A functionality where user can give vite to the given set condidates
+
+functionality:
+1. user sign in/sign up
+2. see the list of candidates
+3. vote one of the candidates
+4. ek banda ek bar hi vote de sakta ho
+5. unique government if proof : aadhar card number
+6. their should be one admin which maintain the table of candidates
+7. user can change their password
+8. user can only login with Aadhar number and password
+9. Admin can't vote at all
+
+---------------------------------------------
+Routes:
+1. User Authentication
+    a. /signup : POST : user sign up
+    b. /login : POST : user login[aadhar number, password]
+
+2. voting
+    a. /candidates : GET : get the list of candidates
+    b. /vote/:candidateId : POST : vote to the candidate
+
+3. Vote Counts:
+    a. /votes/counts : GET : get the list of candidates sorted by votes
+
+4. User Profile
+    a. /profile : GET : get the user profile info
+    b. /profile/password: PUT : change the user's password
+
+5. Admin Candidate Management:
+    a. /candidate : POST : add the candidate
+    b. /candidate/:candidateId : PUT : update the candidate
+    c. /candidate/:candidateId : DELETE : delete the candidate
